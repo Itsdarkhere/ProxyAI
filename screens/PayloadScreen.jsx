@@ -84,7 +84,7 @@ export const PayloadScreen = () => {
 const styles = StyleSheet.create({
     container: {
       position: 'relative',
-      backgroundColor: 'white',
+      backgroundColor: '#F3F3F3',
       height: '100%',
       width: '100%',
       paddingHorizontal: 10,    

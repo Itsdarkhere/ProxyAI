@@ -25,6 +25,20 @@ export const SessionScreen = () => {
             <Payload />
             <Payload />
             <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <Payload />
+            <View style={styles.gap}></View>
         </ScrollView>
     </View>
   )
@@ -45,12 +59,15 @@ const styles = StyleSheet.create({
       width: '100%',
       paddingHorizontal: 10,    
       paddingTop: 20,
-      gap: 20,
+      gap: 15,
     },
     scrollView: {
       overflow: 'hidden',
-      borderRadius: 8,
+      borderRadius: 0,
       flex: 1,
+    },
+    gap: {
+      height: 50,
     },
     sessionStuff: {
       width: '100%',
