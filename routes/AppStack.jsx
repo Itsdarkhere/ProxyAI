@@ -4,6 +4,7 @@ import React from 'react'
 import { SessionScreen } from '../screens/SessionScreen';
 import { SettingsStack } from './SettingsStack';
 import { PayloadScreen } from '../screens/PayloadScreen';
+import { RawScreen } from '../screens/RawScreen';
 
 export const AppStack = () => {
     const Stack = createNativeStackNavigator();
@@ -28,6 +29,13 @@ export const AppStack = () => {
         <Stack.Screen 
           name="Payload"
           component={PayloadScreen}
+          options={{
+            headerShown: true,
+          }}
+        />
+        <Stack.Screen 
+          name="Rawscreen"
+          component={RawScreen}
           options={{
             headerShown: true,
           }}

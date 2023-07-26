@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 export const ViewButton = () => {
     const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Payload')}>
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Rawscreen')}>
         <Text style={styles.text}>View as text</Text>
     </TouchableOpacity>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Text, Switch, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, Switch, TouchableOpacity, Image } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 
@@ -18,12 +18,12 @@ export const MainScreen = () => {
         </View>
         <View style={styles.bottomContainer}>
             <View  style={styles.sessionStuff}>
-                <Text style={styles.currentSession}>Status</Text>
+                <Text style={styles.headingTwo}>Status</Text>
                 <View style={styles.button}>
                     <Text style={styles.text}>{on ? 'ON' : 'OFF'}</Text>
                     <Switch 
-                        trackColor={{false: 'red', true: 'white'}}
-                        thumbColor={on ? '#767577' : 'white'}
+                        trackColor={{false: 'red', true: 'green'}}
+                        thumbColor={on ? 'white' : 'white'}
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={toggleOnOff}
                         value={on}
@@ -31,9 +31,24 @@ export const MainScreen = () => {
                 </View>
             </View>
             <View style={styles.sessionStuff}>
-                <Text style={styles.currentSession}>Current session</Text>
+                <Text style={styles.headingTwo}>Current session</Text>
                 <TouchableOpacity style={styles.session} onPress={() => navigation.navigate('Session')}>
-                    <Text style={styles.text}>Session</Text>
+                    <View style={styles.textBlock}>
+                      <Text style={styles.numberText}>0</Text>
+                      <Text style={styles.typeText}>Hosts</Text>
+                    </View>
+                    <View style={styles.textBlock}>
+                      <Text style={styles.numberText}>0</Text>
+                      <Text style={styles.typeText}>Requests</Text>
+                    </View>
+                    <View style={styles.textBlock}>
+                      <Text style={styles.numberText}>0 B</Text>
+                      <Text style={styles.typeText}>Size</Text>
+                    </View>
+                    <Image
+                      source={require("../assets/arrow.png")}
+                      style={styles.arrow}
+                    />
                 </TouchableOpacity>
             </View>
         </View>
@@ -72,14 +87,14 @@ const styles = StyleSheet.create({
       top: 0,
       left: 15,
       borderRadius: '50%',
-      backgroundColor: 'white',
+      backgroundColor: '#D2D2D2',
       height: 25,
       width: 25,
       display: 'flex',
       alignItems: 'center'
     },    
     settingsText: {
-      color: 'white',
+      color: '#D2D2D2',
     },
     heading: {
       color: 'white',
@@ -87,7 +102,7 @@ const styles = StyleSheet.create({
       fontSize: 22,
     },
     bottomContainer: {
-      backgroundColor: 'white',
+      backgroundColor: '#D2D2D2',
       width: '100%',
       flex: 1, // Changed from '100%' to '50%' to make it responsive
       display: 'flex',
@@ -103,22 +118,34 @@ const styles = StyleSheet.create({
     },
     session: {
       width: '100%',
-      height: 125,
-      backgroundColor: '#D2D2D2',
+      height: 100,
+      backgroundColor: 'black',
       borderRadius: 8,
       display: 'flex',
-      justifyContent: 'center',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
       alignItems: 'center',
+      paddingHorizontal: 15,
+      position: 'relative',
+      paddingRight: 50,
     },
-    currentSession: {
+    textBlock: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      gap: 3,
+    },
+    headingTwo: {
       paddingBottom: 5,
       fontSize: 14,
-      fontWeight: '300',
+      fontWeight: '400',
+      color: 'black'
     },
     button: {
       height: 75,
       width: '100%',
-      backgroundColor: '#D2D2D2',
+      backgroundColor: 'black',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -127,8 +154,25 @@ const styles = StyleSheet.create({
       paddingHorizontal: 15,
     },
     text: {
-      color: 'black',
+      color: 'white',
       fontWeight: '500',
       fontSize: 16,
+    },
+    typeText: {
+      color: 'white',
+      fontWeight: '500',
+      fontSize: 14,
+    },
+    numberText: {
+      color: 'grey',
+      fontWeight: '700',
+      fontSize: 16,
+    },
+    arrow: {
+      height: 15,
+      width: 22,
+      position: 'absolute',
+      right: 10,
+      transform: [{ rotate: '90deg' }]
     }
 })
