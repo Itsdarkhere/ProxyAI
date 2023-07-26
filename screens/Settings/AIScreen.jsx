@@ -2,22 +2,19 @@ import React from 'react'
 import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export const SecondScreen = () => {
+export const AIScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.containerTwo}></View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <View></View>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
     container: {
       position: 'relative',
-      backgroundColor: 'grey',
       height: '100%',
       width: '100%',
+      backgroundColor: 'white',
     },
-    containerTwo: {
-        flex: 1,
-    }
 })

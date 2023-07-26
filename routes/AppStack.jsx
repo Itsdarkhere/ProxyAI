@@ -1,8 +1,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { TestScreen } from "../screens/TestScreen"
+import { MainScreen } from "../screens/MainScreen"
 import React from 'react'
-import { SecondScreen } from '../screens/SecondScreen';
+import { SessionScreen } from '../screens/SessionScreen';
 import { SettingsStack } from './SettingsStack';
+import { PayloadScreen } from '../screens/PayloadScreen';
 
 export const AppStack = () => {
     const Stack = createNativeStackNavigator();
@@ -12,14 +13,21 @@ export const AppStack = () => {
       <Stack.Navigator>
         <Stack.Screen
           name='Test'
-          component={TestScreen}
+          component={MainScreen}
           options={{
             headerShown: false,
           }}
         />
         <Stack.Screen
-          name='Second'
-          component={SecondScreen}
+          name='Session'
+          component={SessionScreen}
+          options={{
+            headerShown: true,
+          }}
+        />
+        <Stack.Screen 
+          name="Payload"
+          component={PayloadScreen}
           options={{
             headerShown: true,
           }}
