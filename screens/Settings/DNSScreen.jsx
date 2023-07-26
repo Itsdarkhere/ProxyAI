@@ -19,19 +19,20 @@ const styles = StyleSheet.create({
       position: 'relative',
       height: '100%',
       width: '100%',
-      backgroundColor: 'white',
+      backgroundColor: '#F3F3F3',
       paddingTop: 20,
       paddingHorizontal: 10,
     },
     text: {
         fontSize: 16,
         lineHeight: 34,
+        paddingTop: 5,
         paddingLeft: 10,
-        fontWeight: '600',
-        color: 'black'
+        fontWeight: '500',
+        color: '#1B1B1B'
     },
     bm: {
-        backgroundColor: 'black',
+        backgroundColor: '#141414',
         borderRadius: 8,
         width: '100%',
         height: 50,
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     },
     emptyText: {
         fontSize: 14,
-        color: 'grey',
+        color: '#F3F3F3',
         fontWeight: '600'
     }
 })

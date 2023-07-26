@@ -10,6 +10,13 @@ export const Detail = ({what, value}) => {
   )
 }
 
+// Palette
+// #000000
+// #141414
+// #1B1B1B
+// #FFFFFF
+// #F3F3F3
+// #E1E1E1
 const styles = StyleSheet.create({
     button: {
         width: '100%',
@@ -22,12 +29,12 @@ const styles = StyleSheet.create({
     },
     what: {
         fontSize: 14,
-        color: 'white',
+        color: '#FFFFFF',
         fontWeight: '600'
     },
     value: {
         fontSize: 14,
-        color: 'white',
+        color: '#F3F3F3',
         fontWeight: '400'
     }
 })

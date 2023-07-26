@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
       position: 'relative',
       height: '100%',
       width: '100%',
-      backgroundColor: 'white',
+      backgroundColor: '#F3F3F3',
       paddingHorizontal: 10,
       paddingTop: 10,
     },

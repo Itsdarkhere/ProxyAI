@@ -19,10 +19,10 @@ export const SettingWithPage = ({text, current}) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderTopColor: 'white',
-    borderTopWidth: 1,
+    borderTopColor: '#E1E1E1',
+    borderTopWidth: 0.5,
     fontWeight: "500",
-    backgroundColor: "black",
+    backgroundColor: "#1B1B1B",
     height: 75,
     width: '100%',
     display: 'flex',
@@ -47,13 +47,13 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   text: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '500',
-    color: 'white',
+    color: '#F3F3F3',
   },
   current: {
     fontSize: 12,
     fontWeight: '600',
-    color: 'white',
+    color: '#E1E1E1',
   }
 })

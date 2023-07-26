@@ -74,6 +74,13 @@ export const PayloadScreen = () => {
   )
 }
 
+// Palette
+// #000000
+// #141414
+// #1B1B1B
+// #FFFFFF
+// #F3F3F3
+// #E1E1E1
 const styles = StyleSheet.create({
     container: {
       position: 'relative',
@@ -87,14 +94,14 @@ const styles = StyleSheet.create({
     block: {
         width: '100%',
         borderRadius: 8,
-        backgroundColor: 'black'
+        backgroundColor: '#141414'
     },
     text: {
         fontSize: 16,
         lineHeight: 34,
-        paddingLeft: 10,
+        paddingLeft: 5,
         fontWeight: '600',
-        color: 'black'
+        color: '#000000'
     },
     supergap: {
         height: 50,

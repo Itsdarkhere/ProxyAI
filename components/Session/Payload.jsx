@@ -18,18 +18,25 @@ export const Payload = () => {
   )
 }
 
+// Palette
+// #000000
+// #141414
+// #1B1B1B
+// #FFFFFF
+// #F3F3F3
+// #E1E1E1
 const styles = StyleSheet.create({
     button: {
         width: '100%',
         height: 45,
-        backgroundColor: 'black',
+        backgroundColor: '#141414',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 10,
-        borderBottomColor: 'white',
-        borderBottomWidth: 1,
+        borderBottomColor: '#E1E1E1',
+        borderBottomWidth: 0.5,
     },
     leftView: {
         display: 'flex',
@@ -51,12 +58,12 @@ const styles = StyleSheet.create({
     },
     textOne: {
         fontSize: 14,
-        color: 'white',
+        color: '#F3F3F3',
         fontWeight: '500',
     },
     textTwo: {
         fontSize: 14,
-        color: 'white',
+        color: '#F3F3F3',
         fontWeight: '500',
     },
     icon: {

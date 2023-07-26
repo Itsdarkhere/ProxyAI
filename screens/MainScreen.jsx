@@ -7,8 +7,17 @@ export const MainScreen = () => {
   const navigation = useNavigation();
   const [on, setOn] = useState(false);
   const toggleOnOff = () => setOn((prevState) => !prevState);
+
+  // Palette
+  // #000000
+  // #141414
+  // #1B1B1B
+  // #FFFFFF
+  // #F3F3F3
+  // #E1E1E1
+
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={['right', 'left', 'top']}>
       <View style={styles.container}>
         <View style={styles.topContainer}>
             <TouchableOpacity style={styles.settings} onPress={() => navigation.navigate('Settings')}>
@@ -65,7 +74,7 @@ const styles = StyleSheet.create({
     },
     container: {
       fontWeight: "500",
-      backgroundColor: "black",
+      backgroundColor: "#000000",
       flex: 1,
       display: 'flex',
       alignItems: 'center',
@@ -82,27 +91,8 @@ const styles = StyleSheet.create({
       paddingHorizontal: 15,
       position: 'relative'
     },
-    settings: {
-      position: 'absolute',
-      top: 0,
-      left: 15,
-      borderRadius: '50%',
-      backgroundColor: '#D2D2D2',
-      height: 25,
-      width: 25,
-      display: 'flex',
-      alignItems: 'center'
-    },    
-    settingsText: {
-      color: '#D2D2D2',
-    },
-    heading: {
-      color: 'white',
-      fontWeight: "700",
-      fontSize: 22,
-    },
     bottomContainer: {
-      backgroundColor: '#D2D2D2',
+      backgroundColor: '#F3F3F3',
       width: '100%',
       flex: 1, // Changed from '100%' to '50%' to make it responsive
       display: 'flex',
@@ -113,13 +103,32 @@ const styles = StyleSheet.create({
       gap: 15,
       padding: 15,
     },
+    settings: {
+      position: 'absolute',
+      top: 10,
+      left: 15,
+      borderRadius: '50%',
+      backgroundColor: '#F3F3F3',
+      height: 25,
+      width: 25,
+      display: 'flex',
+      alignItems: 'center'
+    },    
+    settingsText: {
+      color: '#F3F3F3',
+    },
+    heading: {
+      color: 'white',
+      fontWeight: "700",
+      fontSize: 22,
+    },
     sessionStuff: {
       width: '100%',
     },
     session: {
       width: '100%',
       height: 100,
-      backgroundColor: 'black',
+      backgroundColor: '#1B1B1B',
       borderRadius: 8,
       display: 'flex',
       flexDirection: 'row',
@@ -140,12 +149,12 @@ const styles = StyleSheet.create({
       paddingBottom: 5,
       fontSize: 14,
       fontWeight: '400',
-      color: 'black'
+      color: '#1B1B1B'
     },
     button: {
       height: 75,
       width: '100%',
-      backgroundColor: 'black',
+      backgroundColor: '#1B1B1B',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -159,12 +168,12 @@ const styles = StyleSheet.create({
       fontSize: 16,
     },
     typeText: {
-      color: 'white',
+      color: '#F3F3F3',
       fontWeight: '500',
       fontSize: 14,
     },
     numberText: {
-      color: 'grey',
+      color: '#FFFFFF',
       fontWeight: '700',
       fontSize: 16,
     },

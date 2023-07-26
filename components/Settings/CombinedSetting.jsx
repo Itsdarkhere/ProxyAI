@@ -8,11 +8,17 @@ export const CombinedSetting = ({children}) => {
     </View>
   )
 }
-
+// Palette
+// #000000
+// #141414
+// #1B1B1B
+// #FFFFFF
+// #F3F3F3
+// #E1E1E1
 const styles = StyleSheet.create({
   container: {
     fontWeight: "500",
-    backgroundColor: "black",
+    backgroundColor: "#1B1B1B",
     width: '100%',
     display: 'flex',
     flexDirection: 'column',

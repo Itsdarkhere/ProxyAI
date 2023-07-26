@@ -85,18 +85,26 @@ export const SSLScreen = () => {
   )
 }
 
+// Palette
+// #000000
+// #141414
+// #1B1B1B
+// #FFFFFF
+// #F3F3F3
+// #E1E1E1
+
 const styles = StyleSheet.create({
     container: {
       position: 'relative',
       height: '100%',
       width: '100%',
-      backgroundColor: 'white',
+      backgroundColor: '#F3F3F3',
       paddingTop: 20,
       paddingHorizontal: 10,
     },
     certView: {
         borderRadius: 8,
-        backgroundColor: 'black',
+        backgroundColor: '#141414',
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -114,12 +122,12 @@ const styles = StyleSheet.create({
     },
     textOne: {
         fontSize: 16,
-        color: 'white',
+        color: '#F3F3F3',
         fontWeight: '600'
     },
     textTwo: {
         fontSize: 14,
-        color: 'grey',
+        color: '#E1E1E1',
         fontWeight: '500'
     },
     textThree: {
@@ -149,7 +157,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        borderTopColor: 'grey',
+        borderTopColor: '#E1E1E1',
         borderTopWidth: 0.5,
     },
     supergap: {

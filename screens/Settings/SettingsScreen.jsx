@@ -6,12 +6,20 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export const SettingsScreen = () => {
     const navigation = useNavigation();
 
+    // Palette
+    // #000000
+    // #141414
+    // #1B1B1B
+    // #FFFFFF
+    // #F3F3F3
+    // #E1E1E1
+
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
             <Text style={styles.heading}>Settings</Text>
             <View style={styles.row}>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('AI')}>
-                    <Text style={styles.text}>AI / Prompt</Text>
+                    <Text style={styles.text}>AI Settings</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.row}>
@@ -30,7 +38,7 @@ export const SettingsScreen = () => {
                     <Text style={styles.text}>DNS Spoofing</Text>
                 </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        </View>
     )
 }
 
@@ -40,13 +48,15 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
       justifyContent: 'flex-start',
       alignItems: 'flex-start',
-      backgroundColor: 'white',
+      backgroundColor: '#F3F3F3',
       paddingHorizontal: 10,
+      paddingTop: 20,
     },
     heading: {
         fontSize: 20,
         fontWeight: '500',
         lineHeight: 34,
+        color: '#000000'
     },
     row: {
       marginTop: 10,
@@ -59,12 +69,13 @@ const styles = StyleSheet.create({
     button: {
         flex: 1,
         height: 150,
-        backgroundColor: 'black',
+        backgroundColor: '#1B1B1B',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 8,
     },
     text: {
-        color: 'white'
+        color: '#F3F3F3',
+        fontWeight: '500'
     }
 })

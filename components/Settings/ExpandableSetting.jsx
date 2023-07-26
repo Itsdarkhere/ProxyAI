@@ -8,7 +8,7 @@ export const ExpandableSetting = ({text, current, withBR}) => {
       borderTopColor: 'white',
       borderTopWidth: 1,
       fontWeight: "500",
-      backgroundColor: "black",
+      backgroundColor: "#1B1B1B",
       height: 75,
       width: '100%',
       display: 'flex',
@@ -20,14 +20,14 @@ export const ExpandableSetting = ({text, current, withBR}) => {
       borderRadius: borderRadius
     },
     text: {
-      fontSize: 18,
+      fontSize: 16,
       fontWeight: '500',
-      color: 'white',
+      color: '#F3F3F3',
     },
     current: {
       fontSize: 14,
       fontWeight: '600',
-      color: 'grey',
+      color: '#E1E1E1',
     }
   })
 

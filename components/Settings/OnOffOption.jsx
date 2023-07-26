@@ -6,10 +6,18 @@ export const OnOffOption = ({text, withBR}) => {
   const toggleOnOff = () => setOn((prevState) => !prevState);
   const borderRadius = withBR ? 8 : 0;
 
+  // Palette
+  // #000000
+  // #141414
+  // #1B1B1B
+  // #FFFFFF
+  // #F3F3F3
+  // #E1E1E1
+
   const styles = StyleSheet.create({
     container: {
       fontWeight: "500",
-      backgroundColor: "black",
+      backgroundColor: "#1B1B1B",
       height: 75,
       width: '100%',
       display: 'flex',
@@ -21,9 +29,9 @@ export const OnOffOption = ({text, withBR}) => {
       borderRadius: borderRadius,
     },
     text: {
-      fontSize: 18,
+      fontSize: 16,
       fontWeight: '500',
-      color: 'white',
+      color: '#F3F3F3',
     }
   })
 
