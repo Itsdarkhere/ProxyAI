@@ -2,19 +2,20 @@ import React, { useState } from 'react'
 import { StyleSheet, View, Text, Switch, TouchableOpacity, Image } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
+import axios from 'axios'
 
 export const MainScreen = () => {
-  const navigation = useNavigation();
   const [on, setOn] = useState(false);
   const toggleOnOff = () => setOn((prevState) => !prevState);
+  const navigation = useNavigation();
 
-  // Palette
-  // #000000
-  // #141414
-  // #1B1B1B
-  // #FFFFFF
-  // #F3F3F3
-  // #E1E1E1
+  const testProxy = () => {
+    axios.post("https://proxy-ai-server.vercel.app/api/test", {})
+    .then((res) => console.log(res.data))
+    .catch((err) => {
+      console.log("Err: ", err);
+    })
+  }
 
   return (
     <SafeAreaView style={styles.safeArea} edges={['right', 'left', 'top']}>
@@ -26,6 +27,9 @@ export const MainScreen = () => {
             <Text style={styles.heading}>ProxyAI</Text>
         </View>
         <View style={styles.bottomContainer}>
+            <TouchableOpacity style={styles.testButton} onPress={() => testProxy()}>
+              <Text style={styles.text}>Test api</Text>
+            </TouchableOpacity>
             <View  style={styles.sessionStuff}>
                 <Text style={styles.headingTwo}>Status</Text>
                 <View style={styles.button}>
@@ -66,11 +70,27 @@ export const MainScreen = () => {
   )
 }
 
+// Palette
+// #000000
+// #141414
+// #1B1B1B
+// #FFFFFF
+// #F3F3F3
+// #E1E1E1
 const styles = StyleSheet.create({
     safeArea: {
       position: 'relative',
       backgroundColor: 'black',
       flex: 1,
+    },
+    testButton: {
+      height: 75,
+      width: '100%',
+      backgroundColor: '#1B1B1B',
+      borderRadius: 8,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
     },
     container: {
       fontWeight: "500",
